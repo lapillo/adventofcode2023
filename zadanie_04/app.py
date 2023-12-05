@@ -2,7 +2,7 @@ import math
 
 if __name__ == '__main__':
     result = 0
-    file = open("/config/workspace/adventofcode/zadanie_04/input.txt","r")
+    file = open("adventofcode2023/zadanie_04/input.txt","r")
     list = file.read().split("\n")
     
     #zadanie 1

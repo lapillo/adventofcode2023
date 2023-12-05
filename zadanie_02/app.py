@@ -63,7 +63,7 @@ def miltiple_min_for_game(game):
 
 if __name__ == '__main__':
     result = 0
-    with open("/config/workspace/adventofcode/zadanie_02/input.txt") as file:
+    with open("adventofcode2023/zadanie_02/input.txt") as file:
         for game in file:
             game = game.strip()
             #result = result + validate_game_is_possible(bag, game)

@@ -41,3 +41,35 @@ for i, j in [(1, 2), (3, 4), (5, 6)]:
 d = {'foo': 1, 'bar': 2, 'baz': 3}
 for k, v in d.items():
     print('k =', k, ', v =', v)
+    
+    
+list = []
+list.extend([1,2,3])
+list.extend(range(1,5))
+print(list)
+
+list=[x for x in range(1,5)]
+print(list)
+
+ss = [1,1,1,2,3]
+print (set(ss))
+
+list = {1}
+list.update([1,2,34])
+print(list)
+
+# x = 2276375722
+# y = 160148132
+# list = {x for x in range (x,x+y)}
+
+# x1 = 3424292843
+# y1 = 82110297
+# list2 = {x for x in range (x1,x1+y1)}
+
+# list.update(list2)
+# print (len(list))
+
+
+list = [1,2,3]
+print(list)
+print(list[1:])

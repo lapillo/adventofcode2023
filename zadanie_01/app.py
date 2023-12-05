@@ -110,7 +110,7 @@ def generate_number(line):
 
 if __name__ == '__main__':
     result = 0
-    with open("/config/workspace/adventofcode/zadanie_01/input_01.txt") as file:
+    with open("adventofcode2023/zadanie_01/input_01.txt") as file:
         for item in file:
             #print(item) 
             result = result + int(generate_number(item))    

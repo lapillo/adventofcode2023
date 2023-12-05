@@ -58,7 +58,7 @@ def verify_line(line_number, parsed_engine_lines):
 
 if __name__ == '__main__':
     result = 0
-    parsed_engine_lines = parse_all_lines_from_input("/config/workspace/adventofcode/zadanie_03/input.txt") 
+    parsed_engine_lines = parse_all_lines_from_input("adventofcode2023/zadanie_03/input.txt") 
     for i in range(len(parsed_engine_lines)):
         result += verify_line(i, parsed_engine_lines)
     print(result) 
