@@ -1,4 +1,7 @@
+import sys
 import unittest
+
+sys.path.append('adventofcode2023/zadanie_03')
 
 from app import find_all_in_text
 

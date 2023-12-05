@@ -1,5 +1,3 @@
-import math
-
 if __name__ == '__main__':
     result = 0
     file = open("adventofcode2023/zadanie_05/input.txt","r")

@@ -1,8 +1,11 @@
+import sys
+sys.path.append('/config/workspace/adventofcode2023')
+
 import unittest
 
-from app import get_game_number
-from app import validate_game_is_possible
-from app import miltiple_min_for_game
+from zadanie_02.app import get_game_number
+from zadanie_02.app import validate_game_is_possible
+from zadanie_02.app import miltiple_min_for_game
 
 
 class Zadanie_pierwsze(unittest.TestCase):

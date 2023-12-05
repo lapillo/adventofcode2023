@@ -1,6 +1,8 @@
 import unittest
+import sys
+sys.path.append('/config/workspace/adventofcode2023')
 
-from app import generate_number
+from zadanie_01.app import generate_number
 
 
 class TestNumbers(unittest.TestCase):
