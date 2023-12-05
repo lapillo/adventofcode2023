@@ -73,3 +73,11 @@ print(list)
 list = [1,2,3]
 print(list)
 print(list[1:])
+
+
+def test():
+    return 1,2
+
+i,j = test()
+print (i)
+print(j)

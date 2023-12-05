@@ -4,21 +4,22 @@ def is_union(range1, range2):
 
 
 def divide_ranges (range1, range2):
-    result = []
+    union = []
+    rest = []
     if range1[0]<range2[0] and range1[1]>range2[1]:
         #3 punkty
-        result.append(range2)
-        result.append([range1[0],range2[0]-1])
-        result.append([range2[1]+1,range1[1]])
+        union.extend(range2)
+        rest.append([range1[0],range2[0]-1])
+        rest.append([range2[1]+1,range1[1]])
     elif range1[0]<range2[0]:
-        result.append([range2[0],range1[1]])
-        result.append([range1[0],range2[0]-1])
+        union.extend([range2[0],range1[1]])
+        rest.append([range1[0],range2[0]-1])
     elif range1[1]>range2[1]:
-        result.append([range1[0],range2[1]])
-        result.append([range2[1]+1,range1[1]])
+        union.extend([range1[0],range2[1]])
+        rest.append([range2[1]+1,range1[1]])
     else:
-        result.append(range1)
-    return result
+        union.extend(range1)
+    return union, rest
 
 if __name__ == '__main__':
     result = 0
@@ -66,14 +67,13 @@ if __name__ == '__main__':
                 print("\t\tseed: ", seed)
                 print("\t\trang: ", step[-2:])
                 if (is_union(seed,step[-2:])):
-                    ranges=divide_ranges(seed,step[-2:])
-                    print("\t\t\tdivided: ",ranges)
-                    ranges[0][0]+=step[0]
-                    ranges[0][1]+=step[0]
-                    print("\t\t\tadded: ",ranges)
-                    seeds_for_next_proc.append(ranges[0])
-                    if len(ranges) > 1:
-                         seeds_for_next_step.extend(ranges[1:])
+                    union, rest=divide_ranges(seed,step[-2:])
+                    print("\t\t\tdivided: ",union, rest)
+                    union[0]+=step[0]
+                    union[1]+=step[0]
+                    print("\t\t\tadded: ",union)
+                    seeds_for_next_proc.append(union)
+                    seeds_for_next_step.extend(rest)
                     #print("seeds_for_next_proc: ", seeds_for_next_proc)
                 else:
                     seeds_for_next_step.append(seed)
