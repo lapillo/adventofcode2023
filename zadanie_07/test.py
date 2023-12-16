@@ -2,8 +2,8 @@ import sys
 sys.path.append('/config/workspace/adventofcode2023')
 import unittest
 
-from zadanie_07.app import is_union
-from zadanie_07.app import divide_ranges
+from zadanie_05.app import is_union
+from zadanie_05.app import divide_ranges
 
 class funkcje(unittest.TestCase):
     def test_is_union(self):
